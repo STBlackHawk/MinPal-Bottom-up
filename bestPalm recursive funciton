@@ -1,0 +1,40 @@
+public class Recursive-Function{
+
+    public static void main(String args[]){
+    String test = "apple";
+    System.out.print(RecBestPalm(test,1,test.lenght()));
+    }
+
+    
+    Static boolean IsPalindrome(String S, Int start, Int end){
+       
+        // the input is from 1 to n but java code is from 0 to n-1
+       int i = start - 1;
+       int j = end - 1;
+
+       if(i == j){return true;}
+       if(s[i] != S[j] ){return false;}
+       if (i++ <= j--){
+       start++;
+       end--:
+       IsPalindrome(S, start, end);
+       }
+
+       return true;
+    }
+
+    Static Int RecBestPalm(String S, int start, int end){
+    if (IsPalindrome(S, start, end)){return true;}
+    else{
+        int minimumPal = Integer.MAX_VALUE;
+        for (int p = start, p < end; p++){
+
+            if(minimumPal > RecBestPalm(S, start, p) + RecBestPalm(S, p+1, end)){
+                minimumPal =  RecBestPalm(S, start, p) + RecBestPalm(S, p+1, end);
+                }
+        }
+    }
+    return minimumPal;
+    }
+
+}

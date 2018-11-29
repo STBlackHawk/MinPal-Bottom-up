@@ -1,7 +1,39 @@
 class MinimumPlaindrome
 {
 
-public static void FindAllPalindrome
+Static boolean IsPalindrome(String S, Int start, Int end){
+       
+        // the input is from 1 to n but java code is from 0 to n-1
+       int i = start - 1;
+       int j = end - 1;
+
+       if(i == j){return true;}
+       if(s[i] != S[j] ){return false;}
+       if (i++ <= j--){
+       start++;
+       end--:
+       IsPalindrome(S, start, end);
+       }
+
+       return true;
+    }
+
+
+
+
+public static boolean[][] FindAllPalindrome(String S[], i, j)
+
+{	int lenght = j-i+1 
+	boolean[][] isPal = new boolean[lenght][lenght];
+
+	for (int i = 0; i < lenght; i++ ){
+		for (int j = i; j < lenght ; j++){
+
+			IsPalindrome(S, i, j)
+		}
+	}
+
+}
 
 	
 
